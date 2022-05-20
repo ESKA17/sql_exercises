@@ -1,0 +1,1 @@
+select name as TrackName, sum(quantity) as Total from invoiceline join track using (trackid) join invoice using (invoiceid) where strftime('%Y', invoicedate) = '2013' group by TrackName order by Total desc;
