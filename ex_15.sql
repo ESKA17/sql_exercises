@@ -1,0 +1,1 @@
+select t.name as TrackName, title as AlbumName, m.name as MediaType, g.name as GenreName from track as t join album using (albumid) join mediatype as m using (mediatypeid) join genre as g using (genreid);
