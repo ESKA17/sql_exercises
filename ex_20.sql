@@ -1,0 +1,1 @@
+select sum(unitprice*quantity) as SellingVolumeInUSD, e.firstname || ' ' || e.lastname as FullName from invoice join invoiceline using (invoiceid) join customer using (customerid) join employee as e on customer.supportrepid = e.employeeid group by FullName order by SellingVolumeInUSD desc limit 1;
