@@ -1,0 +1,1 @@
+select unitprice*quantity as Price, c.firstname || ' ' || c.lastname as CustomerName, billingcountry, e.firstname || ' ' || e.lastname as EmployeeName from invoiceline inner join invoice using (invoiceid) inner join customer as c using (customerid) inner join employee as e on c.supportrepid = e.employeeid;

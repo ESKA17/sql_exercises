@@ -1,0 +1,1 @@
+select invoiceid, employee.firstname || ' ' || employee.lastname as FullName from invoice inner join customer using (customerid) inner join employee on customer.supportrepid = employee.employeeid order by invoiceid;
