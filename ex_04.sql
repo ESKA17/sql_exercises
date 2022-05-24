@@ -1,1 +1,1 @@
-select firstname || ' ' || lastname as FullName from employee where title like '%sales%' or '%agent%';
+select firstname || ' ' || lastname as FullName from employee where title like '%agent%';

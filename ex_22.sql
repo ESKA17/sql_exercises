@@ -1,1 +1,1 @@
-select billingcountry, sum(unitprice*quantity) as Sellings from invoice join invoiceline using (invoiceid) group by billingcountry order by Sellings desc;
+select billingcountry, sum(total) as Sellings from invoice group by billingcountry order by Sellings desc;

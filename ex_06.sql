@@ -1,1 +1,1 @@
-select invoiceid, employee.firstname || ' ' || employee.lastname as FullName from invoice join customer using (customerid) join employee on customer.supportrepid = employee.employeeid order by invoiceid;
+select invoiceid, employee.firstname || ' ' || employee.lastname as FullName from invoice join customer using (customerid) join employee on customer.supportrepid = employee.employeeid where title like '%agent';
